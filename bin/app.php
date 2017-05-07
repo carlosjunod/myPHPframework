@@ -11,6 +11,7 @@ class App
   }
 
   public function startApp($params){
+    // var_dump($params);
     $AppController = new AppController($params, $this->config);
   }
 
