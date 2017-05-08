@@ -8,11 +8,13 @@
             <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <?php foreach ($data as $key => $value): ?>
                   <li>
+
+
                       <?php
                       $current = $data['active'];
 
