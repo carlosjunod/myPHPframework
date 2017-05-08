@@ -11,21 +11,23 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                <?php
+                  // var_dump($data);
+                 ?>
+
                 <?php foreach ($data as $key => $value): ?>
                   <li>
-                      <a class="page-scroll" href="<?php echo $value; ?>"><?php echo $key; ?></a>
+                      <?php
+                      $current = $data['active'];
+
+                      if ($key != 'active'): ?>
+                        <a class="page-scroll <?=@$key == $current ? 'active':''?>" href="<?= $value; ?>">
+                          <?= $key;  ?>
+                        </a>
+                      <?php endif; ?>
+
                   </li>
                 <?php endforeach; ?>
-
-                <!-- <li>
-                    <a class="page-scroll" href="#download"><?php echo $data['home']; ?></a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#features">Features</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                </li> -->
             </ul>
         </div>
         <!-- /.navbar-collapse -->
