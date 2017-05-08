@@ -27,6 +27,37 @@
     <!-- Theme JavaScript -->
     <script src="../assets/js/new-age.min.js"></script>
 
+    <script>
+    $(document).ready(function(){
+        $("#myButton").click(function(){
+            $("#myModal").modal();
+        });
+    });
+
+    $('#login').click(function(){
+      console.log("clicked");
+
+      $.ajax({
+        url: '/welcome/ajaxLog',
+        data: {
+          "username": $('#username').val(),
+          "password": $('#password').val()
+        },
+        success: function(response){
+          console.log(response);
+
+          if(response == 'true'){
+            console.log('is logged');
+          } else {
+            console.log('is NOT logged');
+          }
+        }
+      })
+    })
+
+
+    </script>
+
 </body>
 
 </html>

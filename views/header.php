@@ -37,3 +37,9 @@
 </head>
 
 <body id="page-top">
+  <form class="form" action="index.html" method="post" enctype="text/plain" style="background-color:rgba(0,0,0,.1); padding:50px 30px 30px 30px; text-align:right; position:absolute; width:100%; z-index:2;">
+      <input type="text" name="username" value="" placeholder="username"  id="username"/>
+      <input type="password" name="password" value=""  id="password"/>
+      <button type="button" name="button" class="btn btn-primary">log in</button>
+      <a id="login">log in</a>
+  </form>
