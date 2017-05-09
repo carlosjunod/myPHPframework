@@ -17,6 +17,14 @@ class welcome extends AppController
   }
 
   public function contact(){
+    
+
+
+    // require_once '.views/header.php'
+    // require_once '.views/nav.php'
+    // require_once '.views/contact.php'
+    // require_once '.views/footer.php'
+
     $this->getView('header', array('title' => 'contact'));
     $this->getView('nav', array('home' => '/', 'api'=> '/api', 'contact'=>'/welcome/contact', 'modules'=>'/modules', 'active'=>'contact'));
 
@@ -33,6 +41,10 @@ class welcome extends AppController
 
   }
 }
+
+// public function getView($page, $data = array()){
+//   require_once './views/'.$page.'.php';
+// }
 
 
 

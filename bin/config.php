@@ -5,7 +5,7 @@ $config = array(
   'dbname' => 'fruits',
   'dbpass' => 'root',
   'dbuser' => 'root',
-  'baseurl' => 'http://127.0.0.1'
+  'baseurl' => 'http://127.0.0.1/'
 );
 
 $str = $config['baseurl']."/".$_SERVER['REQUEST_URI'];
