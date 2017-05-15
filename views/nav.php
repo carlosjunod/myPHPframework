@@ -8,24 +8,37 @@
             <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
         </div>
 
-
+        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+                <?php
+                  // var_dump($data);
+                 ?>
+
                 <?php foreach ($data as $key => $value): ?>
                   <li>
-
-
-                      <?php
-                      $current = $data['active'];
-
-                      if ($key != 'active'): ?>
-                        <a class="page-scroll <?=@$key == $current ? 'active':''?>" href="<?= $value; ?>">
+                        <a class="page-scroll <?=@ $key == $currentpage ? 'active':''?>" href="<?= $value; ?>">
                           <?= $key;  ?>
                         </a>
-                      <?php endif; ?>
-
                   </li>
                 <?php endforeach; ?>
+
+
+                  <?=@$_REQUEST['msg']?$_REQUEST['msg']:'';?>
+                  <? if(@$_SESSION['loggedin'] && @$_SESSION['loggedin'] == 1) { ?>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/auth/logout">logout</a></li>
+                  <? } else {?>
+                    <li>
+                      <form id="login-header">
+                        <input type="text" name="username" value="" placeholder="username"  id="username" required/>
+                        <input type="password" name="password" value=""  id="password" placeholder="password" required/>
+                        <button type="button" name="button" class="btn btn-primary" id="login">Log In</button>
+                      </form>
+                    </li>
+                  <? }?>
+
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

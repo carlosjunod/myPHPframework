@@ -1,6 +1,6 @@
 <?php
 // echo "</br>appcontroller.php loaded";
-
+session_start();
 class AppController
 {
 
@@ -41,7 +41,7 @@ class AppController
 
   }
 
-  public function getView($page, $data = array()){
+  public function getView($page, $data = array(), $currentpage = ''){
     require_once './views/'.$page.'.php';
   }
 

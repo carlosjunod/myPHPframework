@@ -14,6 +14,15 @@
     <!-- Bootstrap Core CSS -->
     <link href="../assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link href="../assets/css/custom.css" rel="stylesheet">
+    <?
+      if(isset($data['style'])){
+        echo '<link href="'.$data['style'].'" rel="stylesheet">';
+      }
+    ?>
+
+
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -37,9 +46,3 @@
 </head>
 
 <body id="page-top">
-  <form class="form" action="index.html" method="post" enctype="text/plain" style="background-color:rgba(0,0,0,.1); padding:50px 30px 30px 30px; text-align:right; position:absolute; width:100%; z-index:2;">
-      <input type="text" name="username" value="" placeholder="username"  id="username"/>
-      <input type="password" name="password" value=""  id="password"/>
-      <button type="button" name="button" class="btn btn-primary">log in</button>
-      <a id="login">log in</a>
-  </form>
