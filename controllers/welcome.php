@@ -4,22 +4,13 @@ class welcome extends AppController
 {
 
   public function checkLogin(){
-    // if ($usergood==1) {
-    //   $_SESSION['loggedin']=1;
-    // } else {
-    //   $_SESSION['loggedin']=0;
-    // }
+
   }
 
 
   public function __construct()
   {
-    // var_dump($_SESSION['loggedin']);
-    // if (!empty($_SESSION['loggedin'])) {
-    //     if ($_SESSION['loggedin']) {
-    //       header('location://welcome/login');
-    //     }
-    // }
+
   }
 
   public function index(){
@@ -50,13 +41,21 @@ class welcome extends AppController
     return $string;
   }
 
+  public function addForm(){
+    $this->getView('header', array('title' => 'api'));
+    $this->getView('addform');
+  }
+
+
+  public function addAction(){
+    var_dump($_REQUEST);
+  }
+
+
+  public function listFruits(){
+
+  }
+
 }
-
-// public function getView($page, $data = array()){
-//   require_once './views/'.$page.'.php';
-// }
-
-
-
 
 ?>

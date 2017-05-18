@@ -1,4 +1,4 @@
-<form class="form" id="sign-up-form">
+<form class="form" id="sign-up-form" action="/registration/getFromForm" enctype="text/plain">
   <div class="form-group">
     <label for="username">Name</label>
     <input type="text" name="name" value="" placeholder="Username" class="form-control" id="name_reg" required/>
@@ -64,24 +64,18 @@
     imagefilledrectangle($image,0,0,399,99,$white);
     imagettftext ($image, 70, 5, 20, 40, $color, $dir."ImogenAgnes.woff", $_SESSION['captcha']);
 
-
     for ($i=0; $i < 3; $i++) {
       imageline($image, 0, rand() % 50, 200, rand() % 50, $linecolor);
     }
     for ($i=0; $i < 1000; $i++) {
       imagesetpixel($image, rand() % 200, rand() % 50, $pixelcolor);
     }
-
-
-
     // var_dump($image);
 
     imagepng($image, './assets/img/captcha.png');
   }
 
-  ?>
-
-  <? generateCaptcha(); ?>
+  generateCaptcha(); ?>
 
   <img src="./assets/img/captcha.png" />
 

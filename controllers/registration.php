@@ -19,8 +19,8 @@
       $this->getView('footer');
     }
 
-    public function getFromFrom(){
-      var_dump($_POST);
+    public function getFromForm(){
+      var_dump($_REQUEST);
     }
 
     public function getFromAjax(){

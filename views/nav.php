@@ -24,16 +24,17 @@
                 <?php endforeach; ?>
 
 
-                  <?=@$_REQUEST['msg']?$_REQUEST['msg']:'';?>
+
                   <? if(@$_SESSION['loggedin'] && @$_SESSION['loggedin'] == 1) { ?>
                     <li><a href="/profile">Profile</a></li>
                     <li><a href="/auth/logout">logout</a></li>
                   <? } else {?>
                     <li>
-                      <form id="login-header">
+                      <form id="login-header" action="/auth/login" method="post">
                         <input type="text" name="username" value="" placeholder="username"  id="username" required/>
                         <input type="password" name="password" value=""  id="password" placeholder="password" required/>
-                        <button type="button" name="button" class="btn btn-primary" id="login">Log In</button>
+                        <!-- <input type="file" name="file" value=""> -->
+                        <button type="submit" name="button" class="btn btn-primary" id="login">Log In</button>
                       </form>
                     </li>
                   <? }?>

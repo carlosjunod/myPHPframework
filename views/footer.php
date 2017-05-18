@@ -38,25 +38,25 @@
       $('.btnpopover').popover()
 
 
-      $('#login').click(function(){
-        $.ajax({
-          url: '/auth/ajaxLog',
-          data: {
-            "username": $('#username').val(),
-            "password": $('#password').val()
-          },
-          success: function(response){
-            console.log(response);
-
-            if(response == 'true'){
-              alert('loggin succesful');
-              window.location = '/profile';
-            } else {
-              alert('ERROR: '+ response);
-            }
-          }
-        })
-      })
+      // $('#login').click(function(){
+      //   $.ajax({
+      //     url: '/auth/ajaxLog',
+      //     data: {
+      //       "username": $('#username').val(),
+      //       "password": $('#password').val()
+      //     },
+      //     success: function(response){
+      //       console.log(response);
+      //
+      //       if(response == 'true'){
+      //         alert('loggin succesful');
+      //         window.location = '/profile';
+      //       } else {
+      //         alert('ERROR: '+ response);
+      //       }
+      //     }
+      //   })
+      // })
 
       $('#registration').click(function(e){
         console.log(e);

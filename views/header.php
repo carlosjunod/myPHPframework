@@ -46,3 +46,6 @@
 </head>
 
 <body id="page-top">
+<div class="message">
+<?= @$_REQUEST['msg'] ? $_REQUEST['msg']:''; ?>
+</div>
