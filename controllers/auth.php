@@ -28,7 +28,10 @@
         for ($i=0; $i < count($usersData); $i++) {
           if ($usersData[$i][0] == $_REQUEST['username'] && $usersData[$i][1] == $_REQUEST['password']) {
               $_SESSION['loggedin']=1;
-              header('location:/profile');
+              // var_dump($usersData);
+              $_SESSION['bio'] = $usersData[$i][2];
+              header("Location:/profile");
+
               break 1;
           }else {
               header("Location:/welcome?msg=Bad Login username or password");
