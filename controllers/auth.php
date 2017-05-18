@@ -23,55 +23,22 @@
         array_push($usersData, $fields);
       }
 
-      // print_r($usersData);
-
-      // echo "<br/>";
-      // print_r($usersData[0][0]);
-      // print_r($_REQUEST['username']);
-      // echo "<br/>";
-      // print_r($usersData[0][1]);
-      // print_r($_REQUEST['password']);
-
-
-
-
       if($_REQUEST['username'] && $_REQUEST['password']){
 
         for ($i=0; $i < count($usersData); $i++) {
-          if ($usersData[i][0] == $_REQUEST['username'] && $usersData[i][1] == $_REQUEST['password']) {
+          if ($usersData[$i][0] == $_REQUEST['username'] && $usersData[$i][1] == $_REQUEST['password']) {
               $_SESSION['loggedin']=1;
-              // header('location:/profile');
+              header('location:/profile');
+              break 1;
           }else {
-            echo "ELSE <br/>";
-            print_r($usersData[i][0]);
-            print_r($_REQUEST['username']);
-            echo "<br/>";
-            print_r($usersData[i][1]);
-            print_r($_REQUEST['password']);
-              // header("Location:/welcome?msg=Bad Login username or password");
+              header("Location:/welcome?msg=Bad Login username or password");
           }
         }
 
       } else {
-        // header("Location:/welcome?msg=Bad Login username doesn't exists");
+        header("Location:/welcome?msg=Bad Login username doesn't exists");
       }
 
-
-      // if($_REQUEST['username'] && $_REQUEST['password']){
-      //
-      //   if($_REQUEST['username']=='joe@gmail.com' && $_REQUEST['password']=='123'){
-      //
-      //     var_dump($_FILES);
-      //
-      //     $_SESSION['loggedin']=1;
-      //     // header('location:/profile');
-      //
-      //   } else {
-      //     // header("Location:/welcome?msg=Bad Login");
-      //   }
-      // } else {
-      //   // header("Location:/welcome?msg=Bad Login");
-      // }
     }
 
     public function logout(){
