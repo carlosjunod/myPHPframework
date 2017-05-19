@@ -18,10 +18,13 @@
         array_push($lines, fgets($file));
       }
 
+      fclose($file);
+
       foreach ($lines as $line) {
         $fields= explode('|', $line);
         array_push($usersData, $fields);
       }
+
 
       if($_REQUEST['username'] && $_REQUEST['password']){
 
