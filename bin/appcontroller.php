@@ -6,6 +6,9 @@ class AppController
 
   public function __construct($urlPathParts, $config)
   {
+    //PDO connection
+    $this->db = new PDO('mysql:dbname='.$config['dbame'].';'.$config['dbuser'],$config['dbpass']);
+
     // db information
     $this->urlPathParts = $urlPathParts;
 
@@ -45,8 +48,11 @@ class AppController
     require_once './views/'.$page.'.php';
   }
 
-  public function getModels(){
-    // do later
+  public function getModel($page){
+    require_once './models/'.$page.'.php';
+    $model = new $page($this);
+    return $model;
+
   }
 
 }
