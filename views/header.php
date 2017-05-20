@@ -12,10 +12,10 @@
     <title>My Framework - <?php echo $data['title']; ?> </title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../assets/css/custom.css" rel="stylesheet">
+    <link href="/assets/css/custom.css" rel="stylesheet">
     <?
       if(isset($data['style'])){
         echo '<link href="'.$data['style'].'" rel="stylesheet">';
@@ -29,12 +29,12 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="../assets/lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/lib/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="../assets/lib/device-mockups/device-mockups.min.css">
+    <link rel="stylesheet" href="/assets/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/lib/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="/assets/lib/device-mockups/device-mockups.min.css">
 
     <!-- Theme CSS -->
-    <link href="../assets/css/new-age.min.css" rel="stylesheet">
+    <link href="/assets/css/new-age.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

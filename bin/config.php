@@ -16,13 +16,13 @@ $extention = pathinfo($str);
 // var_dump($extention['extension']);
 
 include 'router.php';
-
-if ($urlPathParts[0] == 'assets') {
-
-} else {
+//
+// if ($urlPathParts[1] == 'assets') {
+//
+// } else {
   $route = new router($urlPathParts,$config);
 
-}
+// }
 
 // $route = new router($urlPathParts,$config);
 

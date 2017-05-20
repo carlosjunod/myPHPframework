@@ -7,8 +7,7 @@ class AppController
   public function __construct($urlPathParts, $config)
   {
     //PDO connection
-    $this->db = new PDO('mysql:dbname='.$config['dbame'].';'.$config['dbuser'],$config['dbpass']);
-
+    $this->db = new PDO('mysql:host=localhost;port=3306;dbname='.$config['dbname'].';',$config['dbuser'], $config['dbpass']);
     // db information
     $this->urlPathParts = $urlPathParts;
 

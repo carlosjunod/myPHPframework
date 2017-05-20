@@ -16,16 +16,16 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="/assets/lib/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="../assets/js/new-age.min.js"></script>
+    <script src="/assets/js/new-age.min.js"></script>
 
     <script>
     $(document).ready(function(){
