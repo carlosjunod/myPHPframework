@@ -29,6 +29,7 @@
 
     <script>
     $(document).ready(function(){
+
       $("#myButton").click(function(){
           $("#myModal").modal();
       });
@@ -37,26 +38,6 @@
 
       $('.btnpopover').popover()
 
-
-      // $('#login').click(function(){
-      //   $.ajax({
-      //     url: '/auth/ajaxLog',
-      //     data: {
-      //       "username": $('#username').val(),
-      //       "password": $('#password').val()
-      //     },
-      //     success: function(response){
-      //       console.log(response);
-      //
-      //       if(response == 'true'){
-      //         alert('loggin succesful');
-      //         window.location = '/profile';
-      //       } else {
-      //         alert('ERROR: '+ response);
-      //       }
-      //     }
-      //   })
-      // })
 
       $('#registration').click(function(e){
         console.log(e);
@@ -101,6 +82,34 @@
             window.location = '/welcome';
           }
         })
+      })
+
+      var container = $('#listResults');
+      $('#submitBook').click(function(e){
+        container.empty();
+        // console.log(container);
+        e.preventDefault();
+
+
+        let query = $('#query').val().replace(/ /g,'');
+
+        $.ajax({
+          url: '/books/ajaxBook',
+          data: {
+            'query': query
+          },
+          success: function(response){
+              var value = JSON.parse(response);
+              for(i = 0; i<value.items.length; i++ ){
+                container.append('<li>'+value.items[i].volumeInfo.title+'</li>');
+                console.log(value.items[i].volumeInfo.title);
+              }
+          }
+        })
+
+
+
+
       })
 
     });

@@ -15,7 +15,7 @@ class welcome extends AppController
 
   public function index(){
     $this->getView('header', array('title' => 'welcome'));
-    $this->getView('nav', array('home' => '/', 'api'=> '/api', 'contact'=>'/welcome/contact', 'modules'=>'/modules', 'books'=>'/books'), 'home');
+    $this->getView('nav', array('home' => '/', 'api'=> '/api', 'contact'=>'/welcome/contact', 'modules'=>'/modules'), 'home');
 
     $this->getView('welcome', array('code' => $this->getRandomText()));
     $this->getView('footer');
